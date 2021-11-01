@@ -1,0 +1,32 @@
+/*расположение кнопок в header */
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 10fr;
+    border-bottom: 1px solid silver;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+}
+/*btn syle*/
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1vm;
+}
+/*активные ссылки*/
+a.active {
+    color: red;
+}
+
+.container {
+    border-left: 1px solid silver;
+}
+
+.login {
+    text-align: right;
+    padding-right: 3%;
+}

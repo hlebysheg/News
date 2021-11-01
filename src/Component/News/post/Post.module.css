@@ -1,0 +1,43 @@
+/*попробовать избавиться от пиксилей*/
+.post {
+    border: 1px solid silver;
+    /*border-radius: 10%;*/
+    margin-top: 1%;
+    /*float: left;*/
+    margin-left: 1%;
+    padding: 1%;
+    /*width: 32%;*/
+    min-height: 300px;
+    /*max-height: 600px;*/
+    transition:  transform 0.7s ;
+}
+
+
+/*Стили для текста поста*/
+.date {
+    text-align: left;
+}
+
+
+.theme {
+    text-align: left;
+}
+
+.disc {
+    text-align: left;
+}
+
+/*анимация наведения*/
+.container {
+
+}
+.container :hover  {
+    transform: translate(7px, 7px);
+}
+.container ul:hover {
+    transform: none;
+}
+
+/*ul {*/
+/*    color: green;*/
+/*}*/

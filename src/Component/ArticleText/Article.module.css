@@ -1,0 +1,32 @@
+.container {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+    border: 1px solid silver;
+    word-wrap: break-word;
+}
+
+.topic{
+    text-align: left;
+}
+
+.main {
+
+}
+
+.date{
+    justify-content: left;
+    align-self: end;
+    text-align: left;
+    /*display: block;*/
+}
+
+.theme{
+
+}
+
+
+
+.text{
+
+}
