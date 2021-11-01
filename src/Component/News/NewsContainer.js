@@ -45,8 +45,7 @@ const NewsContainer = (props) => {
                       onMyPostsClick={onMyPostsClick}
                       news={props} onNextClick = {onNextClick}
                       modalActive = {modalActive}
-                      setModalActive = {setModalActive}
-                      setAuthor={setAuthor} />
+                      setModalActive = {setModalActive}/>
         </>
     )
 }

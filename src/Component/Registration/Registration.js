@@ -4,6 +4,11 @@ import {maxLengthCreator, minLengthCreator, requiredField} from "../../formValid
 import {reduxForm, Field} from "redux-form";
 import {Input} from "../../common/FormControl/FormControl";
 import {registration} from "../../Redux/auth-reducer";
+import rg from './Registration.module.css';
+
+
+let validateMaxLength =  maxLengthCreator(20);
+let validateMinLength =  minLengthCreator(4);
 
 const Registration = (props) => {
     const onSubmit = (formData) => {
@@ -18,29 +23,29 @@ const Registration = (props) => {
     }
     return (
         <div>
-            <h1>registration</h1>
+            <h1>Registration</h1>
             <ReduxregistrationForm onSubmit = {onSubmit}/>
             {props.isReg?<span>Registration complite</span>:<></>}
         </div>
     )
 }
 
-let validateMaxLength =  maxLengthCreator(20);
-let validateMinLength =  minLengthCreator(4);
 
 const RegistrationFrom = (props) => {
     return (
-        <form onSubmit = {props.handleSubmit}>
-            <div>
-                <Field placeholder = {'login'} name = {'login'} component = {Input}  validate = {[requiredField, validateMaxLength, validateMinLength]}/>
-            </div>
-            <div>
-                <Field placeholder = {'password'} name = {'password'} component = {Input}  validate = {[requiredField, validateMaxLength, validateMinLength]}/>
-            </div>
-            <div>
-                <button>registration</button>
-            </div>
-        </form>
+        <div className={rg.body}>
+            <form onSubmit = {props.handleSubmit} className={rg.form}>
+                <div>
+                    <Field placeholder = {'login'} name = {'login'} component = {Input}  validate = {[requiredField, validateMaxLength, validateMinLength]}/>
+                </div>
+                <div>
+                    <Field placeholder = {'password'} name = {'password'} type={"password"} component = {Input}  validate = {[requiredField, validateMaxLength, validateMinLength]}/>
+                </div>
+                <div>
+                    <button className={"btn btn-success"}>registration</button>
+                </div>
+            </form>
+        </div>
     )
 }
 

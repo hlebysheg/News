@@ -4,15 +4,14 @@ import {maxLengthCreator, minLengthCreator, requiredField} from "../../formValid
 import {reduxForm, Field} from "redux-form";
 import {Input} from "../../common/FormControl/FormControl";
 import {login} from "../../Redux/auth-reducer";
+import lg from './Login.module.css';
 
 const Login = (props) => {
     const onSubmit = (formData) => {
-        //props.login(formData.login, formData.password , formData.remember);
-        //if first submit dont have remember atr
+
         if(!formData.remember){
             formData.remember = false;
         }
-        //console.log(formData)
         props.login(formData.login, formData.password , formData.remember);
     }
     if (props.isAuth) {
@@ -32,20 +31,22 @@ let validateMinLength =  minLengthCreator(4);
 
 const LoginFrom = (props) => {
     return (
-        <form onSubmit = {props.handleSubmit}>
-            <div>
-                <Field placeholder = {'login'} name = {'login'} component = {Input}  validate = {[requiredField, validateMaxLength, validateMinLength]}/>
-            </div>
-            <div>
-                <Field placeholder = {'password'} name = {'password'} component = {Input}  validate = {[requiredField, validateMaxLength, validateMinLength]}/>
-            </div>
-            <div>
-                <Field component = {'input'} name = {'remember'} type = {'checkbox'}  /> remember me
-            </div>
-            <div>
-                <button>Login</button>
-            </div>
-        </form>
+        <div className={lg.body}>
+            <form onSubmit = {props.handleSubmit} className={lg.form}>
+                <div>
+                    <Field placeholder = {'login'} name = {'login'} component = {Input}  validate = {[requiredField, validateMaxLength, validateMinLength]}/>
+                </div>
+                <div>
+                    <Field placeholder = {'password'} name = {'password'} component = {Input}  validate = {[requiredField, validateMaxLength, validateMinLength]}/>
+                </div>
+                <div>
+                    <Field component = {'input'} name = {'remember'} type = {'checkbox'}  /> remember me
+                </div>
+                <div>
+                    <button className={"btn btn-success"}>Login</button>
+                </div>
+            </form>
+        </div>
     )
 }
 

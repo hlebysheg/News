@@ -3,6 +3,7 @@
   display: grid;
   background-color: white;
   grid-template-rows:  60px 20fr 0.5fr;
+  font-family: Georgia, serif;
 }
 
 .App-header {

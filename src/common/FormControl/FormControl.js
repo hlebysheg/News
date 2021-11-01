@@ -4,9 +4,9 @@ import s from './FormControl.module.css';
 export const Textarea = ({input, meta, ...props}) => {
   const error = meta.touched && meta.error;
   return (
-    <div className = {s.formControl + " " + (error ? s.error : "")}>
-      <textarea {...input} {...props} className={s.textarea}/>
-      <br/>
+    <div className = {""}>
+      <textarea {...input} {...props} className={s.textarea+' '+ "form-control"+ " " +(error ? "is-invalid" : "")}/>
+
     {error && <span>{meta.error}</span>}
     {!error && <span>Заполните все поля</span>}
     </div>
@@ -16,10 +16,10 @@ export const Textarea = ({input, meta, ...props}) => {
 export const Input = ({input, meta, ...props}) => {
   const error = meta.touched && meta.error;
   return (
-    <div className = {s.formControl + " " + (error ? s.error : "")}>
-      <input {...input} {...props}/>
-      <br/>
-        {error && <span>{meta.error}</span>}
+    <div className = {""}>
+      <input {...input} {...props} className={s.textarea+' '+ "form-control"+ " " +(error ? "is-invalid" : "")}/>
+
+        {error ?<span>{meta.error}</span>:<br/>}
     </div>
   )
 }

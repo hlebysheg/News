@@ -12,6 +12,7 @@ a:hover{
     text-decoration: none;
     color: black;
 }
+
 a {
     text-decoration: none;
     color: black;
@@ -19,7 +20,7 @@ a {
 }
 /*активные ссылки*/
 a.active {
-    color: red;
+    color: cornflowerblue;
 }
 
 .container {

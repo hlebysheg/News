@@ -53,7 +53,7 @@ export  const regAC = (login, id, isAuth) => {
 }
 
 //thunk
-export const login = (login, password, rememberMe) => {
+export const login = (login=null, password=null, rememberMe=null) => {
 
     return (dispatch) => {
         NewsApi.login(login, password, rememberMe).then(response => {
@@ -110,28 +110,7 @@ export const registration = (login, password) => {
             if(response.resultCode === 1) {
                 dispatch(regAC())
             }
-            // document.cookie = "password="+password;
-            // document.cookie = "login="+login;
-            // document.cookie = "password="+password;
         });
     }
 }
 
-// export const init = () => {
-//
-//     return (dispatch) => {
-//         NewsApi.init().then(response => {
-//             //userAPI.setUserData().then(response => {
-//
-//             if(response.resultCode === 0) {
-//
-//             }
-//             //console.log(response)
-//             if(response.resultCode === 1) {
-//                 dispatch(loginAC(response.login, response.id, true))
-//             }
-//             //document.cookie = "login="+login +";"+ "password="+password;
-//             // document.cookie = "password="+password;
-//         });
-//     }
-// }

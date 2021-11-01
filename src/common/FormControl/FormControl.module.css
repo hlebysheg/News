@@ -1,5 +1,5 @@
 .formControl {
-  border: 1px
+  /*border: 1px*/
 }
 
 .error input,
@@ -14,4 +14,5 @@
 
 .textarea {
   resize: none;
+  width: 30vh;
 }

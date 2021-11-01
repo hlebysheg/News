@@ -6,8 +6,8 @@ export const NewsPage = (props) => {
 
     return (
         <>
-            {!props.author?<button className={'btn btn-primary '+NW.btn} onClick={props.onMyPostsClick}>MyPosts</button>:
-                <button className={'btn btn-danger '+NW.btn} onClick={props.onMyPostsClick}>{props.author}</button>}
+            {!props.author?<button className={'btn btn-primary '+NW.btn} onClick={()=>props.onMyPostsClick()}>MyPosts</button>
+                : <button className={'btn btn-danger '+NW.btn} onClick={()=>props.onMyPostsClick()}>{props.author}</button>}
             <News {...props.news}/>
             <div className={"d-grid gap-2"}>
                 <button className={"btn btn-primary"} type={"button"} onClick={()=>props.onNextClick()}>View more</button>

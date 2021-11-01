@@ -19,6 +19,7 @@ function App(props) {
     useEffect(() => {
         dispatch(login(userLogin, password, true))
     },[])
+
     return (
         <BrowserRouter>
             <div className="App">

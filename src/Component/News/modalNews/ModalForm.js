@@ -6,7 +6,7 @@ import {Input, Textarea} from "../../../common/FormControl/FormControl";
 import Md from './Modal.module.css'
 
 const max50 = maxLengthCreator(400);
-const min1 = minLengthCreator(1);
+const min1 = minLengthCreator(3);
 
 let ModalForm = props => {
     const { handleSubmit, reset } = props

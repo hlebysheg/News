@@ -13,7 +13,7 @@ export const Header = (props) => {
             </div>
             <div className={Hd.login}>
                 {props.auth ?<span>{props.login} <button onClick={props.logout} className={"btn btn-danger"}>logout</button></span>
-                    :<NavLink to = {'/login'}>Login</NavLink>}
+                    :<NavLink to = {'/login'} activeClassName={Hd.active}>Login</NavLink>}
             </div>
         </div>
     );
