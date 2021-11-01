@@ -2,7 +2,6 @@ import Md from './Modal.module.css'
 import ModalForm from "./ModalForm";
 import {reset} from "redux-form";
 import * as axios from 'axios';
-import {NewsApi} from "../../../api/news-api";
 import {postNewThunk} from "../../../Redux/news-reducer";
 import {useDispatch} from "react-redux";
 //(disk, theme, text)
@@ -17,6 +16,7 @@ export const ModalContainer = (props) => {
     const dispatch = useDispatch();
 
     const addPost = (values) => {
+
         values.author = props.author;
         dispatch(postNewThunk(values))
     }
