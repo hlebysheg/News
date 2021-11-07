@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    /*margin-left: 30%;*/
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.input {
+    width: 40%;
+}

@@ -10,7 +10,8 @@
 }
 
 .btn {
-    margin-top: 1%;
+    padding: 1rem;
+
 }
 
 @media (max-width: 760px) {

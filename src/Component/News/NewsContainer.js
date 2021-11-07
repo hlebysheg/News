@@ -18,7 +18,6 @@ const NewsContainer = (props) => {
         }
     },[])
 
-
     useEffect(() => {
         dispatch(getNewsThunk(0, 5, author))
     }, [author])
@@ -38,6 +37,9 @@ const NewsContainer = (props) => {
         //dispatch(getNewsThunk(0, 5, author));
     }
 
+    const searchSubmit = (value) => {
+        setAuthor(value)
+    }
 
     return (
         <>
@@ -45,7 +47,8 @@ const NewsContainer = (props) => {
                       onMyPostsClick={onMyPostsClick}
                       news={props} onNextClick = {onNextClick}
                       modalActive = {modalActive}
-                      setModalActive = {setModalActive}/>
+                      setModalActive = {setModalActive}
+                      searchSubmit = {searchSubmit}/>
         </>
     )
 }
